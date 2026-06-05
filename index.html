@@ -43,6 +43,12 @@
     .section{width:min(100% - 2rem,var(--max));margin:0 auto;padding:clamp(3.4rem,7vw,6.5rem) 0}
     .split{display:grid;grid-template-columns:.88fr 1.12fr;gap:clamp(1.6rem,5vw,4rem);align-items:start;border-bottom:1px solid var(--line)}
     .section p{font-size:1.12rem;color:var(--muted);margin:0}.section p+p{margin-top:1rem}
+    .photo-section{background:linear-gradient(180deg,#fffdf7,var(--paper));padding:clamp(2.5rem,6vw,5rem) clamp(1rem,4vw,3rem)}
+    .photo-panel{width:min(100%,var(--max));margin:0 auto;display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(1.5rem,4vw,3rem);align-items:center}
+    .photo-copy{max-width:540px}.photo-copy p{font-size:1.12rem;color:var(--muted);margin:1rem 0 0}
+    .site-photo-frame{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:calc(var(--radius) + 8px);padding:.75rem;box-shadow:var(--shadow)}
+    .site-photo{display:block;width:100%;height:auto;border-radius:var(--radius);object-fit:cover}
+    .site-photo-frame figcaption{margin:.7rem .25rem .15rem;color:var(--muted);font:700 .9rem system-ui,-apple-system,"Segoe UI",sans-serif}
     .cards-section h2{max-width:820px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
     .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.35rem;box-shadow:0 16px 36px rgba(33,26,22,.06)}.card p{margin-top:.9rem;font-size:1rem}
     .feature{width:100%;padding-left:clamp(1rem,4vw,3rem);padding-right:clamp(1rem,4vw,3rem);background:linear-gradient(180deg,rgba(196,154,74,.16),rgba(196,154,74,0)),var(--paper)}
@@ -51,7 +57,7 @@
     .support-list{margin:1rem 0 0;padding-left:1.2rem;color:var(--muted);font-size:1.08rem}.support-list li+li{margin-top:.45rem}
     .note{margin-top:1rem!important;padding:1rem;border-left:4px solid var(--gold);background:rgba(196,154,74,.12);border-radius:0 14px 14px 0}.contact-link{color:var(--brick-dark);font-weight:800;text-underline-offset:.18em}
     .site-footer{padding:2rem clamp(1rem,4vw,3rem);border-top:1px solid var(--line);color:var(--muted);font:.9rem system-ui,-apple-system,"Segoe UI",sans-serif}.site-footer p{width:min(100%,var(--max));margin:0 auto}
-    @media(max-width:850px){.site-header{align-items:flex-start;flex-direction:column}.hero-inner,.split,.cards,.crest-panel{grid-template-columns:1fr}.hero{min-height:auto}h1{font-size:clamp(2.7rem,16vw,5rem)}}
+    @media(max-width:850px){.site-header{align-items:flex-start;flex-direction:column}.hero-inner,.split,.cards,.crest-panel,.photo-panel{grid-template-columns:1fr}.hero{min-height:auto}h1{font-size:clamp(2.7rem,16vw,5rem)}}
   </style>
 </head>
 <body>
@@ -74,6 +80,19 @@
           <p><strong>Public value:</strong> preservation, creative reuse, arts partnerships, community gathering, and neighborhood benefit.</p>
           <p><strong>Approach:</strong> practical, phased, and respectful of the historic fabric.</p>
         </aside>
+      </div>
+    </section>
+    <section class="photo-section" aria-labelledby="entrance-title">
+      <div class="photo-panel">
+        <div class="photo-copy">
+          <p class="section-label">The entrance</p>
+          <h2 id="entrance-title">A public face worth preserving.</h2>
+          <p>The red doors, brick façade, stained-glass detail, and crest create a clear identity for the project: historic character first, with adaptive use built around what makes the place memorable.</p>
+        </div>
+        <figure class="site-photo-frame">
+          <img class="site-photo" src="pigtown-sanctuary-entrance.svg" alt="Concept image of the Pigtown Sanctuary entrance with red doors, brick façade, and crest">
+          <figcaption>Pigtown Sanctuary entrance concept.</figcaption>
+        </figure>
       </div>
     </section>
     <section id="vision" class="section split"><div><p class="section-label">The vision</p><h2>Preserve the character. Open the possibilities.</h2></div><div><p>The goal is to honor the building’s history while creating a flexible future for arts, music, performance, creative work, and community use. The sanctuary remains the heart of the project: a generous room with presence, memory, and public value.</p><p>This is not a teardown idea. It is a reuse idea: stabilize what matters, preserve what gives the place its identity, and build a practical path for renewed neighborhood life.</p></div></section>
