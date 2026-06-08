@@ -3,25 +3,37 @@ const json = (data, status = 200) => new Response(JSON.stringify(data), {
   headers: { 'Content-Type': 'application/json; charset=utf-8' }
 });
 
+const html = (message, status = 200) => new Response(`<!doctype html><meta charset="utf-8"><title>Pigtown Sanctuary</title><body style="font-family:system-ui;margin:3rem;line-height:1.5"><h1>${message}</h1><p><a href="/">Return to the site</a></p></body>`, {
+  status,
+  headers: { 'Content-Type': 'text/html; charset=utf-8' }
+});
+
 const clean = (value) => String(value || '').replace(/[\r\n]+/g, ' ').trim();
 
 export async function onRequestPost(context) {
   const { request, env } = context;
+  const wantsJson = (request.headers.get('accept') || '').includes('application/json');
 
   let data;
   try {
-    data = await request.json();
+    const type = request.headers.get('content-type') || '';
+    if (type.includes('application/json')) {
+      data = await request.json();
+    } else {
+      const form = await request.formData();
+      data = Object.fromEntries(form.entries());
+    }
   } catch {
-    return json({ ok: false, error: 'Invalid form submission.' }, 400);
+    return wantsJson ? json({ ok: false, error: 'Invalid form submission.' }, 400) : html('The message could not be sent right now.', 400);
   }
 
   const name = clean(data.name);
   const email = clean(data.email);
   const message = String(data.message || '').trim();
 
-  if (!name || !email || !message) return json({ ok: false, error: 'Please fill out all three fields.' }, 400);
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ ok: false, error: 'Please enter a valid email address.' }, 400);
-  if (!env.RESEND_API_KEY) return json({ ok: false, error: 'Email service is not configured yet.' }, 500);
+  if (!name || !email || !message) return wantsJson ? json({ ok: false, error: 'Please fill out all three fields.' }, 400) : html('Please fill out all three fields.', 400);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return wantsJson ? json({ ok: false, error: 'Please enter a valid email address.' }, 400) : html('Please enter a valid email address.', 400);
+  if (!env.RESEND_API_KEY) return wantsJson ? json({ ok: false, error: 'The message could not be sent right now.' }, 500) : html('The message could not be sent right now. Please try again shortly.', 500);
 
   const subject = `Pigtown Sanctuary inquiry from ${name}`;
   const text = [
@@ -49,10 +61,10 @@ export async function onRequestPost(context) {
     })
   });
 
-  if (!response.ok) return json({ ok: false, error: 'The message could not be sent yet.' }, 502);
-  return json({ ok: true });
+  if (!response.ok) return wantsJson ? json({ ok: false, error: 'The message could not be sent right now.' }, 502) : html('The message could not be sent right now. Please try again shortly.', 502);
+  return wantsJson ? json({ ok: true }) : html('Message sent. Thank you.');
 }
 
 export async function onRequestGet() {
-  return json({ ok: false, error: 'Use POST.' }, 405);
+  return html('Use the contact form to send a message.', 405);
 }
