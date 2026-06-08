@@ -1,6 +1,7 @@
 Pigtown Sanctuary
-Version: v2026.06.08-1441
-Updated: 2026-06-08 14:41 ET
-Contact form: FormSubmit ajax restored
+Version: v2026.06.08-1528
+Updated: 2026-06-08 15:28 ET
+Live marker path: /version.txt
+Contact form: private /api/contact
 Public email links: removed
-Mailto fallback: removed
+Direct FormSubmit exposure: removed
