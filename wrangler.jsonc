@@ -1,7 +1,1 @@
-{
-  "name": "pigtown-sanctuary",
-  "compatibility_date": "2026-06-08",
-  "assets": {
-    "directory": "."
-  }
-}
+{"name":"pigtown-sanctuary","main":"src/worker.js","compatibility_date":"2026-06-08","assets":{"directory":"."}}
