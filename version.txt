@@ -1,5 +1,5 @@
 Pigtown Sanctuary
-Version: v2026.06.09-1341
-Updated: 2026-06-09 13:41 ET
-Expected live path: /version.txt (G7)
-Repo paths updated: version.txt and public/version.txt
+Version: PIGTOWN-ROOT-LIVECHECK-20260609-G
+Updated: 2026-06-09 ET
+Check file: root version.txt
+Live URL: /version.txt
