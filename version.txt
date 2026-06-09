@@ -1,7 +1,7 @@
 Pigtown Sanctuary
-Version: v2026.06.08-1528
-Updated: 2026-06-08 15:28 ET
-Live marker path: /version.txt
-Contact form: private /api/contact
-Public email links: removed
-Direct FormSubmit exposure: removed
+Version: v2026.06.09-0910
+Updated: 2026-06-09 09:10 ET
+Modified by: ChatGPT
+Modification note: version marker updated during four-site audit; no page/form changes made in this commit.
+Expected live path: /version.txt
+Repo paths updated: version.txt and public/version.txt
