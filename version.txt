@@ -1,7 +1,5 @@
 Pigtown Sanctuary
-Version: v2026.06.09-0910
-Updated: 2026-06-09 09:10 ET
-Modified by: ChatGPT
-Modification note: version marker updated during four-site audit; no page/form changes made in this commit.
-Expected live path: /version.txt
+Version: v2026.06.09-1341
+Updated: 2026-06-09 13:41 ET
+Expected live path: /version.txt (G7)
 Repo paths updated: version.txt and public/version.txt
