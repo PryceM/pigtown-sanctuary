@@ -1,5 +1,5 @@
 Pigtown Sanctuary
-Version: PIGTOWN-ROOT-LIVECHECK-20260609-G
+Version: Final test: all four sites can be updated.
 Updated: 2026-06-09 ET
 Check file: root version.txt
 Live URL: /version.txt
