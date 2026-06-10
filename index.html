@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Pigtown Sanctuary is a family-led preservation and adaptive-use vision for the historic church at 527 Scott Street in Baltimore.">
+  <meta name="description" content="Pigtown Sanctuary is a family-led preservation and adaptive-use vision for a historic church in Baltimore.">
   <title>Pigtown Sanctuary | Preserve the Sanctuary</title>
   <style>
     :root{
@@ -15,7 +15,6 @@
       --cream:#fff4df;
       --paper:#f6ead2;
       --muted:#70584b;
-      --wood:#5d3b25;
       --line:rgba(93,59,37,.22);
       --shadow:0 20px 60px rgba(36,23,19,.18);
     }
@@ -30,14 +29,14 @@
     .top{position:sticky;top:0;z-index:10;background:rgba(246,234,210,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0}.brand{font-size:24px;color:var(--brick-dark);font-weight:bold}.navlinks{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}.navlinks a{color:var(--ink);text-decoration:none;font-size:14px}.navlinks a:hover{text-decoration:underline}
     .hero{background:radial-gradient(circle at 12% 0,rgba(216,168,70,.28),transparent 28%),linear-gradient(135deg,var(--brick-dark),var(--brick) 52%,#1d0706);color:var(--cream);padding:70px 0 54px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}.kicker{text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-size:13px;font-weight:800}.lead{font-size:clamp(18px,2vw,24px);max-width:760px;color:#fff8ec}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 18px;text-decoration:none;font-weight:800;border:1px solid transparent;cursor:pointer}.btn.primary{background:var(--gold);color:#21110d}.btn.secondary{border-color:rgba(255,244,223,.55);color:var(--cream)}
-    .photo-card{background:rgba(255,244,223,.08);border:1px solid rgba(255,244,223,.28);border-radius:30px;padding:18px;box-shadow:var(--shadow)}.photo-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;border:1px solid rgba(255,244,223,.28)}.caption{color:#ead5b2;font-size:14px;margin-top:12px}
+    .photo-card{background:rgba(255,244,223,.08);border:1px solid rgba(255,244,223,.28);border-radius:30px;padding:18px;box-shadow:var(--shadow);max-width:500px;margin-inline:auto}.photo-frame{height:clamp(260px,34vw,420px);overflow:hidden;border-radius:22px;border:1px solid rgba(255,244,223,.28);background:#2b0908}.photo-frame img{display:block;width:150%;height:118%;max-width:none;object-fit:cover;object-position:center 44%;transform:translate(-18%,-7%)}.caption{color:#ead5b2;font-size:14px;margin-top:12px}
     section{padding:70px 0;border-bottom:1px solid var(--line)}.split{display:grid;grid-template-columns:.75fr 1.25fr;gap:38px}.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--clay);font-size:12px;font-weight:900;margin-bottom:10px}.quote{font-family:Georgia,"Times New Roman",serif;font-size:clamp(25px,3vw,40px);line-height:1.12;color:var(--brick-dark)}.panel{background:#fff8ea;border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:0 12px 34px rgba(36,23,19,.08)}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff8ea;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 12px 34px rgba(36,23,19,.06)}.card p{color:var(--muted)}
     .programs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.program{background:linear-gradient(180deg,#fffaf0,#f3dfbd);border:1px solid var(--line);border-radius:22px;padding:20px}.program strong{display:block;color:var(--brick-dark);margin-bottom:8px}
     .faq{display:grid;gap:14px}.faq details{background:#fff8ea;border:1px solid var(--line);border-radius:18px;padding:18px}.faq summary{cursor:pointer;font-weight:900;color:var(--brick-dark)}.faq p{margin-top:12px;color:var(--muted)}
     .contact{background:linear-gradient(135deg,#2a0a08,var(--brick-dark));color:var(--cream)}.contact h2{color:var(--cream)}.contact .small{color:#e8d0aa}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px}.contact-form{display:grid;gap:14px;background:rgba(255,244,223,.08);border:1px solid rgba(255,244,223,.24);border-radius:24px;padding:24px}.contact-form label{display:grid;gap:7px;font-weight:800;color:#ffe5ad}.contact-form input,.contact-form textarea,.contact-form select{width:100%;border:1px solid rgba(255,244,223,.35);border-radius:12px;background:rgba(255,255,255,.09);color:var(--cream);font:16px system-ui;padding:12px}.contact-form option{color:#241713}.contact-form textarea{min-height:150px;resize:vertical}.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:2px solid rgba(216,168,70,.75);outline-offset:2px}.hidden-field{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}.status{min-height:22px;color:#fff4df;font-size:15px}
     footer{padding:34px 0;background:#1d0b08;color:#d9c3a2}.version{display:block;margin-top:8px;font-size:12px;color:#bda57f}.pill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.pill{border:1px solid var(--line);background:#fff8ea;border-radius:999px;padding:8px 12px;color:var(--brick-dark);font-weight:800;font-size:14px}.contact .pill{background:rgba(255,244,223,.08);border-color:rgba(255,244,223,.24);color:#ffe5ad}
-    @media(max-width:900px){.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.grid,.programs{grid-template-columns:1fr}.top{position:static}.nav{align-items:flex-start;flex-direction:column}.navlinks{justify-content:flex-start}section{padding:52px 0}}
+    @media(max-width:900px){.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.grid,.programs{grid-template-columns:1fr}.top{position:static}.nav{align-items:flex-start;flex-direction:column}.navlinks{justify-content:flex-start}section{padding:52px 0}.photo-card{max-width:360px;margin-top:28px}.photo-frame{height:330px}.photo-frame img{width:175%;height:125%;transform:translate(-25%,-9%)}}
   </style>
 </head>
 <body>
@@ -54,14 +53,14 @@
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div>
-          <div class="kicker">527 Scott Street · Pigtown · Baltimore</div>
+          <div class="kicker">Pigtown · Baltimore</div>
           <h1>Preserve the sanctuary. Do not flip the church.</h1>
           <p class="lead">Pigtown Sanctuary is a family-led preservation and adaptive-use vision for a historic Baltimore church: the sanctuary restored for music, arts, gathering, worship, and community life, with family stewardship, working shops, and long-term neighborhood programming supporting the building’s survival.</p>
           <div class="cta"><a class="btn primary" href="#contact">Follow the Preservation</a><a class="btn secondary" href="#faq">Read the real questions</a></div>
           <div class="pill-list"><span class="pill">Preservation first</span><span class="pill">Sanctuary intact</span><span class="pill">Family stewardship</span><span class="pill">Baltimore-rooted</span></div>
         </div>
         <figure class="photo-card">
-          <img src="sanctuary.jpg" alt="Historic brick church at 527 Scott Street in Baltimore">
+          <div class="photo-frame"><img src="sanctuary.jpg" alt="Historic brick church detail in Baltimore"></div>
           <figcaption class="caption">The existing building is the starting point. Any plan has to respect the sanctuary, the brick, the handwork, and the neighborhood context.</figcaption>
         </figure>
       </div>
@@ -71,7 +70,7 @@
       <div class="wrap split">
         <div><div class="eyebrow">Our Why</div><h2>A retirement project, not a developer pitch.</h2></div>
         <div class="panel">
-          <p>I am looking at 527 Scott Street as a preservation project first. Not as a flip, not as a luxury conversion, and not as a way to erase a church and market the shell. The reason the building matters is the sanctuary. That is the part that gives it weight, memory, and purpose.</p>
+          <p>I am looking at this as a preservation project first. Not as a flip, not as a luxury conversion, and not as a way to erase a church and market the shell. The reason the building matters is the sanctuary. That is the part that gives it weight, memory, and purpose.</p>
           <p>For me, this is also a retirement project and a family legacy project. The idea is to bring my family into a building that needs daily care, practical repair, and a real use. Jeremy and his family, Noah, and I would each have a stake in keeping the place alive. The family use is not meant to replace the church identity. It is meant to make stewardship possible.</p>
           <p>The long-term vision is a building where the sanctuary remains the heart: music, readings, worship, community meetings, small arts gatherings, and other uses that fit the space instead of fighting it. Around that, the working parts of the building could support stained glass, lamp making, welding, theater work, design, and youth arts programming.</p>
           <p>There are real questions. Zoning, fire code, residential use, insurance, parking, accessibility, historic review, financing, and construction all need professional answers. This site is not claiming those answers are solved. It is a way to explain the intention clearly: preserve the sanctuary, listen before acting, and build a credible path only if Baltimore officials, neighbors, preservation people, and practical experts can help us do it correctly.</p>
@@ -85,7 +84,7 @@
         <div>
           <p class="quote">The building should tell us what it can become. The plan should not force it into something generic.</p>
           <div class="grid" style="margin-top:24px">
-            <div class="card"><h3>History to verify</h3><p>The site is associated with a historic Scott Street church presence in Pigtown. The next step is confirming the church history through records, photographs, title history, neighborhood memory, and Baltimore preservation sources.</p></div>
+            <div class="card"><h3>History to verify</h3><p>The project is connected to a historic church presence in Pigtown. The next step is confirming the building history through records, photographs, title history, neighborhood memory, and Baltimore preservation sources.</p></div>
             <div class="card"><h3>Condition to document</h3><p>Before-and-after documentation should start with the existing sanctuary, balcony, stained glass, brick, roof, structure, utilities, water intrusion, life-safety conditions, and any prior alterations.</p></div>
             <div class="card"><h3>Photos to add</h3><p>Use honest photographs: brick, doors, sanctuary volume, stained glass, workshop possibilities, damaged areas, and the surrounding block. No fake renderings that imply approvals or finished work.</p></div>
           </div>
@@ -107,7 +106,7 @@
       <div class="wrap split">
         <div><div class="eyebrow">Family Workshops</div><h2>Living there means caring for it every day.</h2></div>
         <div class="grid">
-          <div class="card"><h3>Family residential concept</h3><p>The attached parsonage and related spaces may be explored for three family households or caretaker-style use, but only if Baltimore confirms what is lawful and feasible in writing.</p></div>
+          <div class="card"><h3>Family residential concept</h3><p>Attached parsonage or related spaces may be explored for family households or caretaker-style use, but only if Baltimore confirms what is lawful and feasible in writing.</p></div>
           <div class="card"><h3>Craft and repair</h3><p>Stained glass, lamp making, theater work, design, and small-scale repair belong naturally in a building shaped by handwork.</p></div>
           <div class="card"><h3>Noah’s making space</h3><p>Welding and fabrication concepts would need proper code, ventilation, fire protection, insurance, and separation. The idea is creative work, not unsafe improvisation.</p></div>
         </div>
@@ -133,7 +132,8 @@
       <div class="wrap split">
         <div><div class="eyebrow">FAQ</div><h2>The real questions need written answers.</h2></div>
         <div class="faq">
-          <details open><summary>Can Baltimore allow residential, arts, and community use in a church building?</summary><p>That has to be confirmed by Baltimore officials and qualified local counsel. The working idea is church preservation with possible parsonage, caretaker, family, arts, and community uses supporting the building. No final use is being represented until zoning, occupancy, code, and legal review are confirmed in writing.</p></details>
+          <details open><summary>Why does the site not list an address?</summary><p>No offer has been made, no purchase has closed, and no control over any property is represented. The address is intentionally not being published while the project is still exploratory.</p></details>
+          <details><summary>Can Baltimore allow residential, arts, and community use in a church building?</summary><p>That has to be confirmed by Baltimore officials and qualified local counsel. The working idea is church preservation with possible parsonage, caretaker, family, arts, and community uses supporting the building. No final use is being represented until zoning, occupancy, code, and legal review are confirmed in writing.</p></details>
           <details><summary>What about fire code and life safety?</summary><p>This is a major issue. Assembly space, residential areas, workshops, exits, alarms, sprinklers, accessibility, and occupant load all need professional review. The project should assume life-safety work may drive cost and feasibility.</p></details>
           <details><summary>What about parking and neighborhood impact?</summary><p>The project should avoid making promises about events or public programming until parking, loading, noise, hours, occupancy, and neighbor concerns are understood. The intention is small, appropriate use, not event-hall marketing.</p></details>
           <details><summary>Will historic review or CHAP matter?</summary><p>Possibly. The team needs to verify whether any local, state, or federal historic review applies and whether historic tax credits, preservation easements, or design guidance could help or restrict the project.</p></details>
@@ -150,7 +150,7 @@
           <h2>Talk to us if you can help make this honest and possible.</h2>
           <p>We want to hear from Pigtown neighbors, clergy, preservation people, zoning and code professionals, CHAP or historic-tax-credit experts, funders, lenders, architects, contractors, artists, and community partners.</p>
           <div class="pill-list"><span class="pill">Baltimore zoning</span><span class="pill">CHAP / preservation</span><span class="pill">Fire and code</span><span class="pill">Historic financing</span><span class="pill">Community arts</span></div>
-          <p class="small" style="margin-top:20px">No purchase, approval, occupancy, residential arrangement, event schedule, or opening date is represented by this site. This is an exploratory preservation effort subject to professional review and written city confirmation.</p>
+          <p class="small" style="margin-top:20px">No offer, purchase, control, approval, occupancy, residential arrangement, event schedule, or opening date is represented by this site. This is an exploratory preservation effort subject to professional review and written city confirmation.</p>
         </div>
         <form class="contact-form" id="contact-form" action="/api/contact" method="post" novalidate>
           <label>Name<input id="contact-name" name="name" autocomplete="name" required></label>
@@ -175,7 +175,7 @@
   </main>
 
   <footer>
-    <div class="wrap">© Pigtown Sanctuary. A family-led preservation and adaptive-use vision for 527 Scott Street, Baltimore.<span class="version">v2026.06.10-fresh-rebuild</span></div>
+    <div class="wrap">© Pigtown Sanctuary. A family-led preservation and adaptive-use vision for a historic church in Baltimore.<span class="version">v2026.06.10-no-address-image-fix</span></div>
   </footer>
 
   <script>
