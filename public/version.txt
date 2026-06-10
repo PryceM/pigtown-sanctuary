@@ -1,5 +1,6 @@
 Pigtown Sanctuary
-Version: Final test: all four sites can be updated.
-Updated: 2026-06-09 ET
+Version: v2026.06.10-site-reframe
+Updated: 2026-06-10 ET
+Focus: sanctuary preservation, continued community use, and possible family/caretaker space subject to written city confirmation
 Check file: public/version.txt
 Live URL: /version.txt
