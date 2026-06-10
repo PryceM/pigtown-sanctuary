@@ -1,5 +1,6 @@
 Pigtown Sanctuary
-Version: Final test: all four sites can be updated.
-Updated: 2026-06-09 ET
+Version: v2026.06.10-church-use
+Updated: 2026-06-10 ET
+Focus: continued church/religious use, sanctuary preservation, possible residential/parsonage/caretaker space subject to written city confirmation
 Check file: root version.txt
 Live URL: /version.txt
