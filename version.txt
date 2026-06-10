@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.10-contact-form
+Version: v2026.06.10-no-address-image-fix
 Updated: 2026-06-10 ET
-Focus: homepage contact form posts privately to /api/contact; family-led church-preservation and adaptive-use vision; sanctuary remains the heart
+Focus: fresh preservation/adaptive-use homepage; exact property address removed because no offer or control is represented; hero image crop fixed; contact form posts privately to /api/contact
 Check file: root version.txt
 Live URL: /version.txt
