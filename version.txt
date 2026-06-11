@@ -1,11 +1,10 @@
 Pigtown Sanctuary Project
-Version: v2026.06.11-visible-image-elements
+Version: v2026.06.11-address-image-removed
 Updated: 2026-06-11 ET
 Confirm on live site:
-- Hero image is an actual img element using /pigtown-sanctuary-entrance.svg.
-- Card images are actual img elements using /pigtown-sanctuary-entrance.svg.
-- No raw GitHub image path appears in page CSS.
-- No broken image icons should appear.
+- Address-bearing entrance image is not used on the page.
+- No image source points to /pigtown-sanctuary-entrance.svg.
+- Temporary visual image slots appear until the correct real images are supplied.
 - Contact form behavior is unchanged.
 Check file: root version.txt
 Live URL: /version.txt
