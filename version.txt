@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.11-photo-crop-fix
+Version: v2026.06.11-mockup-build
 Updated: 2026-06-11 ET
-Focus: direct FormSubmit contact preserved; thank-you return added; church photo crop tightened to avoid white edge
+Focus: draft homepage rebuilt to match the provided mockup style; family-led preservation and adaptive-use vision; sanctuary remains the heart; direct contact form preserved; success returns to top with Message sent. Thank you.
 Check file: root version.txt
 Live URL: /version.txt
