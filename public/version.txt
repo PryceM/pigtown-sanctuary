@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.11-mockup-build
+Version: v2026.06.11-hero-rebalance
 Updated: 2026-06-11 ET
-Focus: draft homepage rebuilt to match the provided mockup style; family-led preservation and adaptive-use vision; sanctuary remains the heart; direct contact form preserved; success returns to top with Message sent. Thank you.
+Focus: front-page balance changed so text area carries more page real estate and hero image is narrower; below dreamboard cards use cropped sanctuary-image treatments; headline changed from restoring the home to protecting the sanctuary future; direct contact form preserved.
 Check file: public/version.txt
 Live URL: /version.txt
