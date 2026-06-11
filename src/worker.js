@@ -4,6 +4,7 @@ const json = (data, status = 200) => new Response(JSON.stringify(data), {
 });
 
 const clean = (value) => String(value || '').replace(/[\r\n]+/g, ' ').trim();
+const cleanMessage = (value) => String(value || '').trim().slice(0, 8000);
 
 export default {
   async fetch(request, env) {
@@ -18,29 +19,95 @@ export default {
   }
 };
 
-async function handleContact(request, env) {
-  let data;
-  try {
-    data = await request.json();
-  } catch {
-    return json({ ok: false, error: 'Invalid form submission.' }, 400);
+async function readSubmission(request) {
+  const contentType = request.headers.get('content-type') || '';
+
+  if (contentType.includes('application/json')) {
+    return await request.json();
   }
+
+  if (contentType.includes('application/x-www-form-urlencoded') || contentType.includes('multipart/form-data')) {
+    const form = await request.formData();
+    return Object.fromEntries(form.entries());
+  }
+
+  try {
+    return await request.json();
+  } catch {
+    try {
+      const form = await request.formData();
+      return Object.fromEntries(form.entries());
+    } catch {
+      return null;
+    }
+  }
+}
+
+async function handleContact(request, env) {
+  const data = await readSubmission(request);
+  if (!data) return json({ ok: false, error: 'Invalid form submission.' }, 400);
 
   const name = clean(data.name);
   const email = clean(data.email);
-  const message = String(data.message || data.problem || '').trim();
+  const message = cleanMessage(data.message || data.problem);
   const honey = clean(data._honey || data.website);
-  const recipient = clean(env.CONTACT_EMAIL || env.FORMSUBMIT_EMAIL || 'pigtownsanctuary@gmail.com');
 
   if (honey) return json({ ok: true });
   if (!name || !email || !message) return json({ ok: false, error: 'Please fill out all three fields.' }, 400);
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ ok: false, error: 'Please enter a valid email address.' }, 400);
 
+  const subject = clean(env.CONTACT_SUBJECT || `Pigtown Sanctuary inquiry from ${name}`);
+  const recipient = clean(env.CONTACT_EMAIL || env.FORM_TO || env.RESEND_TO || env.FORMSUBMIT_EMAIL);
+
+  if (env.RESEND_API_KEY) {
+    if (!recipient) return json({ ok: false, error: 'Contact service is not configured.' }, 503);
+    return sendWithResend({ env, recipient, subject, name, email, message });
+  }
+
+  const formSubmitRecipient = clean(env.FORMSUBMIT_EMAIL || env.CONTACT_EMAIL);
+  if (formSubmitRecipient) {
+    return sendWithFormSubmit({ recipient: formSubmitRecipient, subject, name, email, message });
+  }
+
+  return json({ ok: false, error: 'Contact service is not configured.' }, 503);
+}
+
+async function sendWithResend({ env, recipient, subject, name, email, message }) {
+  const from = clean(env.FORM_FROM || env.RESEND_FROM || 'Pigtown Sanctuary <onboarding@resend.dev>');
+  const text = [
+    'New Pigtown Sanctuary inquiry',
+    '',
+    `Name: ${name}`,
+    `Email: ${email}`,
+    '',
+    message
+  ].join('\n');
+
+  const response = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      from,
+      to: [recipient],
+      reply_to: email,
+      subject,
+      text
+    })
+  });
+
+  if (!response.ok) return json({ ok: false, error: 'The message could not be sent right now.' }, 502);
+  return json({ ok: true });
+}
+
+async function sendWithFormSubmit({ recipient, subject, name, email, message }) {
   const body = new FormData();
   body.append('name', name);
   body.append('email', email);
   body.append('message', message);
-  body.append('_subject', env.CONTACT_SUBJECT || `Pigtown Sanctuary inquiry from ${name}`);
+  body.append('_subject', subject);
   body.append('_template', 'table');
   body.append('_captcha', 'false');
 
