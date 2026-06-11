@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.10-vision-board
-Updated: 2026-06-10 ET
-Focus: simple public vision board for a family sanctuary-preservation dream; sales-pitch and step-by-step planning language removed; contact form posts privately to /api/contact
+Version: v2026.06.11-photo-crop-fix
+Updated: 2026-06-11 ET
+Focus: direct FormSubmit contact preserved; thank-you return added; church photo crop tightened to avoid white edge
 Check file: root version.txt
 Live URL: /version.txt
