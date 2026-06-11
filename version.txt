@@ -1,12 +1,13 @@
 Pigtown Sanctuary Project
-Version: v2026.06.11-nav-image-confirmation
+Version: v2026.06.11-public-audience-photo-restore
 Updated: 2026-06-11 ET
 Confirm on live site:
+- Page title no longer shows the street address.
 - Header/nav shows one combined link: Vision/Possible Uses.
 - Vision/Possible Uses scrolls to the Possible uses cards.
-- Public zoning/R-8 status block is removed.
-- Hero and card visuals use CSS-only arched sanctuary artwork, not external image files.
-- No broken image icons should appear.
+- Internal feasibility wording has been removed from public copy.
+- Public zoning status block remains removed.
+- Hero and card visuals use the real entrance-photo source again, not placeholder art.
 - Direct contact form remains pointed to pigtownsanctuary@gmail.com with success return to /?sent=1.
 Check file: root version.txt
 Live URL: /version.txt
