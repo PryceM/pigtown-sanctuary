@@ -1,6 +1,6 @@
 Pigtown Sanctuary Project
-Version: v2026.06.11-project-r8-repair
+Version: v2026.06.11-vision-image-repair
 Updated: 2026-06-11 ET
-Focus: restored Project framing; restored Possible Uses language; restored pigtown-sanctuary-entrance.svg as the main image source; added R-8 zoning/status section; preserved direct FormSubmit contact form to pigtownsanctuary@gmail.com and top success notice.
+Focus: removed public zoning status block; kept site framed as a vision; removed Status nav link; repaired image display by avoiding broken image boxes; preserved direct contact form and top success notice.
 Check file: public/version.txt
 Live URL: /version.txt
