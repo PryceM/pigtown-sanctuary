@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.10-no-address-image-fix
+Version: v2026.06.10-strategy-upgrade
 Updated: 2026-06-10 ET
-Focus: fresh preservation/adaptive-use homepage; exact property address removed because no offer or control is represented; hero image crop fixed; contact form posts privately to /api/contact
+Focus: professional preservation due-diligence homepage; sanctuary-first church stewardship; written city confirmation path; contact form posts privately to /api/contact
 Check file: root version.txt
 Live URL: /version.txt
