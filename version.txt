@@ -1,13 +1,11 @@
 Pigtown Sanctuary Project
-Version: v2026.06.11-live-local-image-repair
+Version: v2026.06.11-visible-image-elements
 Updated: 2026-06-11 ET
 Confirm on live site:
-- Hero/card visuals use local site asset /pigtown-sanctuary-entrance.svg.
-- Raw GitHub image URL is removed from page CSS.
+- Hero image is an actual img element using /pigtown-sanctuary-entrance.svg.
+- Card images are actual img elements using /pigtown-sanctuary-entrance.svg.
+- No raw GitHub image path appears in page CSS.
 - No broken image icons should appear.
-- Header/nav still shows Vision/Possible Uses.
-- Internal feasibility/legal wording remains removed from public copy.
-- Public zoning status block remains removed.
-- Contact form behavior is unchanged and still returns to /?sent=1.
+- Contact form behavior is unchanged.
 Check file: root version.txt
 Live URL: /version.txt
