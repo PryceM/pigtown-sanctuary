@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.11-photo-crop-zoom
+Version: v2026.06.11-mockup-build
 Updated: 2026-06-11 ET
-Focus: rollback-safe draft homepage rebuilt from current main; family-led preservation/adaptive-use vision; sanctuary remains the heart; photo crop zoom hero treatment; direct FormSubmit contact preserved; success returns to top with Message sent. Thank you.
+Focus: draft homepage rebuilt to match the provided mockup style; family-led preservation and adaptive-use vision; sanctuary remains the heart; direct contact form preserved; success returns to top with Message sent. Thank you.
 Check file: root version.txt
 Live URL: /version.txt
