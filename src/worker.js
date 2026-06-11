@@ -5,6 +5,7 @@ const json = (data, status = 200) => new Response(JSON.stringify(data), {
 
 const clean = (value) => String(value || '').replace(/[\r\n]+/g, ' ').trim();
 const cleanMessage = (value) => String(value || '').trim().slice(0, 8000);
+const DEFAULT_CONTACT_EMAIL = 'pigtownsanctuary@gmail.com';
 
 export default {
   async fetch(request, env) {
@@ -57,19 +58,14 @@ async function handleContact(request, env) {
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ ok: false, error: 'Please enter a valid email address.' }, 400);
 
   const subject = clean(env.CONTACT_SUBJECT || `Pigtown Sanctuary inquiry from ${name}`);
-  const recipient = clean(env.CONTACT_EMAIL || env.FORM_TO || env.RESEND_TO || env.FORMSUBMIT_EMAIL);
+  const recipient = clean(env.CONTACT_EMAIL || env.FORM_TO || env.RESEND_TO || env.FORMSUBMIT_EMAIL || DEFAULT_CONTACT_EMAIL);
 
   if (env.RESEND_API_KEY) {
-    if (!recipient) return json({ ok: false, error: 'Contact service is not configured.' }, 503);
     return sendWithResend({ env, recipient, subject, name, email, message });
   }
 
-  const formSubmitRecipient = clean(env.FORMSUBMIT_EMAIL || env.CONTACT_EMAIL);
-  if (formSubmitRecipient) {
-    return sendWithFormSubmit({ recipient: formSubmitRecipient, subject, name, email, message });
-  }
-
-  return json({ ok: false, error: 'Contact service is not configured.' }, 503);
+  const formSubmitRecipient = clean(env.FORMSUBMIT_EMAIL || env.CONTACT_EMAIL || DEFAULT_CONTACT_EMAIL);
+  return sendWithFormSubmit({ recipient: formSubmitRecipient, subject, name, email, message });
 }
 
 async function sendWithResend({ env, recipient, subject, name, email, message }) {
