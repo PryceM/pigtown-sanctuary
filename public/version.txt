@@ -1,6 +1,12 @@
 Pigtown Sanctuary Project
-Version: v2026.06.11-vision-image-repair
+Version: v2026.06.11-nav-image-confirmation
 Updated: 2026-06-11 ET
-Focus: removed public zoning status block; kept site framed as a vision; removed Status nav link; repaired image display by avoiding broken image boxes; preserved direct contact form and top success notice.
+Confirm on live site:
+- Header/nav shows one combined link: Vision/Possible Uses.
+- Vision/Possible Uses scrolls to the Possible uses cards.
+- Public zoning/R-8 status block is removed.
+- Hero and card visuals use CSS-only arched sanctuary artwork, not external image files.
+- No broken image icons should appear.
+- Direct contact form remains pointed to pigtownsanctuary@gmail.com with success return to /?sent=1.
 Check file: public/version.txt
 Live URL: /version.txt
