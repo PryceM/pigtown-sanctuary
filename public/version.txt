@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.10-new-vision
+Version: v2026.06.10-strategy-upgrade
 Updated: 2026-06-10 ET
-Focus: family-led church-preservation and adaptive-use vision; sanctuary remains the heart; possible parsonage/caretaker/family space subject to written city confirmation
+Focus: professional preservation due-diligence homepage; sanctuary-first church stewardship; written city confirmation path; contact form posts privately to /api/contact
 Check file: public/version.txt
 Live URL: /version.txt
