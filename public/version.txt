@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.11-hero-rebalance
+Version: v2026.06.11-worship-lean
 Updated: 2026-06-11 ET
-Focus: front-page balance changed so text area carries more page real estate and hero image is narrower; below dreamboard cards use cropped sanctuary-image treatments; headline changed from restoring the home to protecting the sanctuary future; direct contact form preserved.
+Focus: homepage text now leans toward worship and church activities; dreamboard cards focus on worship, sacred music, fellowship, and care; hero image reduced so more of the building is visible; direct contact form preserved.
 Check file: public/version.txt
 Live URL: /version.txt
