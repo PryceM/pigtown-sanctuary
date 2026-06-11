@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.11-worship-lean
+Version: v2026.06.11-r8-confirmed
 Updated: 2026-06-11 ET
-Focus: homepage text now leans toward worship and church activities; dreamboard cards focus on worship, sacred music, fellowship, and care; hero image reduced so more of the building is visible; direct contact form preserved.
+Focus: restored full single-page layout; added R-8 zoning/status section; preserved direct FormSubmit contact form to pigtownsanctuary@gmail.com; preserved top success notice and return URL; preserved sanctuary.jpg hero/photo usage.
 Check file: root version.txt
 Live URL: /version.txt
