@@ -1,6 +1,6 @@
 Pigtown Sanctuary
-Version: v2026.06.10-strategy-upgrade
+Version: v2026.06.10-public-reset
 Updated: 2026-06-10 ET
-Focus: professional preservation due-diligence homepage; sanctuary-first church stewardship; written city confirmation path; contact form posts privately to /api/contact
+Focus: public-facing preservation and stewardship homepage; internal planning details removed; contact form posts privately to /api/contact
 Check file: public/version.txt
 Live URL: /version.txt
