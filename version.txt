@@ -1,9 +1,11 @@
 Pigtown Sanctuary Project
-Version: v2026.06.11-real-hero-image
+Version: v2026.06.11-less-churchy-card-images
 Updated: 2026-06-11 ET
 Confirm on live site:
 - Hero uses /images/hero.svg from the uploaded 2778 image.
-- Cards use /images/hero.svg from the uploaded 2778 image.
+- Sanctuary card uses /images/sanctuary-illustration.svg.
+- Workshop card uses /images/workshop-illustration.svg.
+- Arts/community card uses /images/community-illustration.svg.
 - No image source points to /pigtown-sanctuary-entrance.svg.
 - Contact form behavior is unchanged.
 Check file: root version.txt
