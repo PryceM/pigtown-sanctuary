@@ -1,12 +1,11 @@
 Pigtown Sanctuary Project
-Version: v2026.06.12-hero-jpg-image
-Updated: 2026-06-12 ET
+Version: v2026.06.24-people-vision-review
+Updated: 2026-06-24 ET
 Confirm on live site:
-- Hero uses /images/hero.jpg from the uploaded original image.
-- Sanctuary card uses /images/sanctuary-illustration.png.
-- Workshop card uses /images/workshop-illustration.png.
-- Arts/community card uses /images/community-illustration.png.
-- No image source points to /pigtown-sanctuary-entrance.svg.
+- Navigation includes People.
+- Page includes section id="people".
+- People section heading reads: The people behind the vision.
+- Pryce bio copy is present.
 - Contact form behavior is unchanged.
 Check file: root version.txt
 Live URL: /version.txt
