@@ -1,13 +1,13 @@
 Pigtown Sanctuary Project
-Version: v2026.06.25-jeremy-noah-people-review
+Version: v2026.06.25-band-mba-people-review
 Updated: 2026-06-25 ET
 Confirm on review site:
 - Navigation includes People.
 - Page includes section id="people".
 - People section heading reads: The people behind the vision.
 - Pryce bio copy is present.
-- Jeremy bio copy is present.
-- Noah bio copy is present.
+- Jeremy bio copy mentions his band and music use.
+- Noah bio copy mentions his MBA and practical operations role.
 - Contact form behavior is unchanged.
 Check file: root version.txt
 Live URL: /version.txt
