@@ -1,0 +1,8 @@
+- Always cd to C:\Users\pmandel.ATTAIN\GitHub\pigtown-sanctuary before Git, Wrangler, or website commands.
+- Never assume the terminal is already in the correct repo.
+- Use .\pryce.cmd check before edits or deploys.
+- Use .\pryce.cmd preview for local review when needed.
+- Production deploy requires explicit Pryce approval.
+- Preserve the existing direct FormSubmit contact form in index.html unless Pryce explicitly approves a replacement.
+- Preserve the existing image paths under images/ and the current people/community content references.
+- Do not deploy from Downloads, extracted ZIP folders, image folders, or C:\WINDOWS\system32.
