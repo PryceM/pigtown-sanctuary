@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Pryce: Check",
+      "type": "shell",
+      "command": "cd \"C:\\Users\\pmandel.ATTAIN\\GitHub\\pigtown-sanctuary\"; .\\pryce.cmd check",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Pryce: Preview",
+      "type": "shell",
+      "command": "cd \"C:\\Users\\pmandel.ATTAIN\\GitHub\\pigtown-sanctuary\"; .\\pryce.cmd preview",
+      "problemMatcher": []
+    }
+  ]
+}
